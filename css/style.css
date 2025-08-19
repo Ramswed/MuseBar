@@ -1412,6 +1412,11 @@ h6 {
     order: -1;
   }
 
+  .about-section .section-title {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
   .about-features {
     grid-template-columns: 1fr;
     gap: 1.5rem;
