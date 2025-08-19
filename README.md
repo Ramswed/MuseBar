@@ -1,18 +1,20 @@
 # 🍺 Muse Bar - Site Web Officiel
 
-[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://musebar.fr)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://musebar.fr)
 
 Site web pour le **Muse Bar**, un établissement de restauration d'exception situé au cœur de Rouen. Découvrez une expérience culinaire unique avec nos planches à partager, cocktails originaux et cave privatisable.
+
+**Version actuelle : 1.0.0** - Site complet et fonctionnel
 
 ## 📁 Structure du Projet
 
 ```
 MuseBar/
-├── 📄 index.html              # Page principale (748 lignes)
+├── 📄 index.html              # Page principale (753 lignes)
 ├── 📁 css/
 │   └── 🎨 style.css           # Styles CSS optimisés (2017 lignes)
 ├── 📁 js/
-│   └── ⚡ script.js           # JavaScript principal (272 lignes)
+│   └── ⚡ script.js           # JavaScript principal (374 lignes)
 ├── 📁 images/                 # Assets visuels
 │   ├── 🍺 bière.png           # Favicon du site
 │   ├── 🏠 bar-interior.png    # Photo intérieur
@@ -23,8 +25,8 @@ MuseBar/
 │   ├── 🎭 muse.svg            # Logo Muse
 │   ├── 🍊 orange.svg          # Icône orange
 │   └── 🌿 terrasse.png        # Photo terrasse
-├── ⚙️ config.js               # Configuration principale (245 lignes)
-├── 🍽️ menu-config.js          # Configuration du menu (150 lignes)
+├── ⚙️ config.js               # Configuration principale (141 lignes)
+├── 🍽️ menu-config.js          # Configuration du menu (252 lignes)
 └── 📖 README.md               # Documentation complète
 ```
 
