@@ -1,16 +1,30 @@
 {
   "name": "muse-bar",
   "version": "1.0.0",
-  "description": "Site web pour le Muse Bar",
+  "description": "Site web officiel du Muse Bar - Bar et cuisine à partager à Rouen",
   "scripts": {
     "serve": "npx serve . -p 8000",
-    "start": "npx serve . -p 8000"
+    "start": "npx serve . -p 8000",
+    "dev": "npx serve . -p 8000",
+    "build": "echo 'Build completed - Static site ready for deployment'"
   },
   "keywords": [
     "bar",
     "restaurant",
-    "rouen"
+    "rouen",
+    "cocktails",
+    "gastronomie",
+    "static-website"
   ],
   "author": "Muse Bar",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "https://musebar.fr",
+  "private": true,
+  "engines": {
+    "node": ">=14.0.0"
+  }
 }
