@@ -1,13 +1,4 @@
-/**
- * Configuration du site Muse Bar
- * @version 1.0.0
- * @author Ramswed
- */
-
 const SITE_CONFIG = {
-  // ========================================
-  // INFORMATIONS GÉNÉRALES
-  // ========================================
   site: {
     name: "Muse",
     tagline: "Bar et cuisine à partager",
@@ -17,9 +8,6 @@ const SITE_CONFIG = {
     year: 2025,
   },
 
-  // ========================================
-  // COORDONNÉES ET CONTACT
-  // ========================================
   contact: {
     address: "4 impasse des Hauts Mariages",
     city: "76000 Rouen, France",
@@ -40,17 +28,11 @@ const SITE_CONFIG = {
     },
   },
 
-  // ========================================
-  // RÉSEAUX SOCIAUX
-  // ========================================
   social: {
     instagram: "https://www.instagram.com/muse_bar_rouen/",
     instagramHandle: "@muse_bar_rouen",
   },
 
-  // ========================================
-  // CONFIGURATION DE LA CARTE
-  // ========================================
   map: {
     enabled: true,
     embedUrl:
@@ -58,9 +40,6 @@ const SITE_CONFIG = {
     address: "4 impasse des Hauts Mariages, 76000 Rouen, France",
   },
 
-  // ========================================
-  // CONFIGURATION DES ANIMATIONS
-  // ========================================
   animations: {
     enabled: true,
     duration: 600,
@@ -68,9 +47,6 @@ const SITE_CONFIG = {
     slideInterval: 5000,
   },
 
-  // ========================================
-  // CONFIGURATION SEO
-  // ========================================
   seo: {
     title: "Muse Bar - L'expérience culinaire unique à Rouen",
     description:
@@ -82,10 +58,6 @@ const SITE_CONFIG = {
     canonical: "https://musebar.fr",
   },
 };
-
-// ========================================
-// FONCTIONS UTILITAIRES
-// ========================================
 
 function updateSiteContent() {
   document.querySelectorAll(".nav-logo h2, .hero-title").forEach((el) => {
@@ -126,10 +98,6 @@ function updateSiteContent() {
     });
   }
 }
-
-// ========================================
-// INITIALISATION
-// ========================================
 
 document.addEventListener("DOMContentLoaded", function () {
   updateSiteContent();

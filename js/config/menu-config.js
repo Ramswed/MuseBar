@@ -1,9 +1,3 @@
-/**
- * Configuration du menu Muse Bar
- * @version 1.0.0
- * @author Muse Bar
- */
-
 const MENU_CONFIG = {
   categories: [
     {
@@ -245,7 +239,6 @@ const MENU_CONFIG = {
   ],
 };
 
-// Export pour utilisation dans d'autres fichiers
 if (typeof module !== "undefined" && module.exports) {
   module.exports = MENU_CONFIG;
 }

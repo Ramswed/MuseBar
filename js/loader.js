@@ -1,7 +1,3 @@
-/**
- * Chargeur de fragments HTML
- */
-
 async function loadHTMLFragment(file, targetSelector) {
   try {
     const response = await fetch(file);
@@ -21,7 +17,6 @@ async function loadHTMLFragment(file, targetSelector) {
 }
 
 async function loadAllFragments() {
-  // Charger tous les fragments dans l'ordre
   await loadHTMLFragment('html/navigation.html', '#navigation-container');
   await loadHTMLFragment('html/hero.html', '#hero-container');
   await loadHTMLFragment('html/menu.html', '#menu-container');
@@ -32,11 +27,9 @@ async function loadAllFragments() {
   await loadHTMLFragment('html/media-banner.html', '#media-banner-container');
   await loadHTMLFragment('html/footer.html', '#footer-container');
   
-  // Déclencher un événement personnalisé quand tous les fragments sont chargés
   window.dispatchEvent(new CustomEvent('fragmentsLoaded'));
 }
 
-// Charger tous les fragments au chargement du DOM
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', loadAllFragments);
 } else {

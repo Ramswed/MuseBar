@@ -1,12 +1,4 @@
-/**
- * Utilitaires (logos, images, accessibilité)
- */
-
 document.addEventListener("DOMContentLoaded", function () {
-  // ========================================
-  // GESTION DES LOGOS
-  // ========================================
-
   function initialiserLogos() {
     const siteLogo = document.querySelector(".nav-logo img");
     if (siteLogo && SITE_CONFIG?.site?.logo) {
@@ -21,14 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Initialisation des logos
   initialiserLogos();
 
-  // ========================================
-  // GESTION DES ERREURS D'IMAGES
-  // ========================================
-
-  // Gestion des erreurs d'images
   document.querySelectorAll("img").forEach((img) => {
     img.addEventListener("error", function () {
       this.style.display = "none";
@@ -36,11 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // ========================================
-  // AMÉLIORATION DE L'ACCESSIBILITÉ
-  // ========================================
-
-  // Amélioration de l'accessibilité
   document.querySelectorAll(".btn, .tab-btn, .hamburger").forEach((element) => {
     element.addEventListener("keydown", function (e) {
       if (e.key === "Enter" || e.key === " ") {
@@ -50,10 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // ========================================
-  // COPIER L'ADRESSE DANS LE PRESSE-PAPIER
-  // ========================================
-  
   function initAddressCopy() {
     const addressClickable = document.querySelector(".address-clickable");
     const copyFeedback = document.querySelector(".copy-feedback");
@@ -67,15 +44,12 @@ document.addEventListener("DOMContentLoaded", function () {
         try {
           await navigator.clipboard.writeText(address);
           
-          // Afficher le feedback
           copyFeedback.classList.add("show");
           
-          // Masquer le feedback après 2 secondes
           setTimeout(() => {
             copyFeedback.classList.remove("show");
-          }, 2000);
+            }, 2000);
         } catch (err) {
-          // Fallback pour les navigateurs plus anciens
           const textArea = document.createElement("textarea");
           textArea.value = address;
           textArea.style.position = "fixed";
@@ -99,9 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Initialiser la copie d'adresse
   initAddressCopy();
 
-  // Réinitialiser après le chargement des fragments HTML
   window.addEventListener('fragmentsLoaded', initAddressCopy);
 });

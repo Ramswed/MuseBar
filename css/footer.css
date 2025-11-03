@@ -1,4 +1,3 @@
-/* Footer - Design Moderne */
 .footer {
   background: linear-gradient(
     135deg,
@@ -107,7 +106,6 @@
   margin-bottom: 1.5rem;
 }
 
-/* Liens */
 .footer-links {
   list-style: none;
   padding: 0;
@@ -152,7 +150,6 @@
   transform: translateX(0);
 }
 
-/* Réseaux sociaux */
 .social-links {
   display: flex;
   gap: 1rem;
@@ -216,7 +213,6 @@
   transform: scale(1.1) rotate(5deg);
 }
 
-/* Footer bottom */
 .footer-bottom {
   text-align: center;
   padding-top: 2rem;
@@ -230,5 +226,3 @@
 .footer-bottom p {
   margin: 0;
 }
-
-/* Responsive styles sont dans responsive.css */

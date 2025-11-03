@@ -1,8 +1,3 @@
-/* Responsive Design - Optimisation Mobile Complète */
-
-/* ========================================
-   TABLETTES (max-width: 992px)
-   ======================================== */
 @media (max-width: 992px) {
   .container {
     max-width: 100%;
@@ -17,7 +12,6 @@
     font-size: 1.1rem;
   }
 
-  /* Hero tablette */
   .hero {
     padding-top: 70px;
     min-height: 85vh;
@@ -35,12 +29,10 @@
     font-size: 1.3rem;
   }
 
-  /* Menu tablette */
   .menu-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 
-  /* About tablette */
   .about-content {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -54,7 +46,6 @@
     min-height: 450px;
   }
 
-  /* Privatisation tablette */
   .privatisation-content {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -65,7 +56,6 @@
     min-height: 400px;
   }
 
-  /* Find tablette */
   .find-content {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -77,15 +67,11 @@
   }
 }
 
-/* ========================================
-   MOBILE (max-width: 768px)
-   ======================================== */
 @media (max-width: 768px) {
   .container {
     padding: 0 20px;
   }
 
-  /* Navigation mobile */
   .nav-container {
     padding: 0 20px;
   }
@@ -128,7 +114,7 @@
     display: block;
   }
 
-  /* Hero mobile */
+
   .hero {
     padding-top: 70px;
     min-height: 85vh;
@@ -166,7 +152,7 @@
     font-size: 0.9rem;
   }
 
-  /* Sections générales mobile */
+
   .section-title {
     font-size: 1.9rem;
     margin-bottom: 1.25rem;
@@ -177,7 +163,7 @@
     margin-bottom: 1.5rem;
   }
 
-  /* Menu mobile */
+
   .menu-section {
     padding: 60px 0;
   }
@@ -225,7 +211,7 @@
     font-size: 1.3rem;
   }
 
-  /* About mobile */
+
   .about-section {
     padding: 60px 0;
   }
@@ -304,7 +290,7 @@
     height: 8px;
   }
 
-  /* Privatisation mobile */
+
   .privatisation-section {
     padding: 60px 0;
   }
@@ -385,7 +371,7 @@
     font-size: 0.85rem;
   }
 
-  /* Find mobile */
+
   .find-section {
     padding: 60px 0;
   }
@@ -453,7 +439,7 @@
     font-size: 0.85rem;
   }
 
-  /* Reviews mobile */
+
   .reviews-section {
     padding: 60px 0;
   }
@@ -509,7 +495,7 @@
     max-width: 280px;
   }
 
-  /* Media banner mobile */
+
   .media-banner {
     padding: 30px 0;
   }
@@ -537,7 +523,7 @@
     font-size: 2.5rem;
   }
 
-  /* Footer mobile */
+
   .footer {
     padding: 50px 0 20px;
   }
@@ -591,7 +577,7 @@
   }
 }
 
-/* ========================================
+
    PETITS MOBILES (max-width: 480px)
    ======================================== */
 @media (max-width: 480px) {
@@ -599,7 +585,7 @@
     padding: 0 15px;
   }
 
-  /* Navigation petit mobile */
+
   .nav-container {
     padding: 0 15px;
   }
@@ -628,7 +614,7 @@
     padding: 0.8rem 1.5rem;
   }
 
-  /* Hero petit mobile */
+
   .hero {
     min-height: 80vh;
     padding-top: 65px;
@@ -660,7 +646,7 @@
     max-width: 260px;
   }
 
-  /* Sections petit mobile */
+
   .section-title {
     font-size: 1.6rem;
     margin-bottom: 1rem;
@@ -671,7 +657,7 @@
     margin-bottom: 1.25rem;
   }
 
-  /* Menu petit mobile */
+
   .menu-section {
     padding: 50px 0;
   }
@@ -706,7 +692,7 @@
     font-size: 1.2rem;
   }
 
-  /* About petit mobile */
+
   .about-section {
     padding: 50px 0;
   }
@@ -783,7 +769,7 @@
     height: 7px;
   }
 
-  /* Privatisation petit mobile */
+
   .privatisation-section {
     padding: 50px 0;
   }
@@ -866,7 +852,7 @@
     font-size: 0.8rem;
   }
 
-  /* Find petit mobile */
+
   .find-section {
     padding: 50px 0;
   }
@@ -926,7 +912,7 @@
     font-size: 0.8rem;
   }
 
-  /* Reviews petit mobile */
+
   .reviews-section {
     padding: 50px 0;
   }
@@ -975,7 +961,7 @@
     padding: 0.6rem 1.2rem;
   }
 
-  /* Media banner petit mobile */
+
   .media-banner {
     padding: 25px 0;
   }
@@ -996,7 +982,7 @@
     font-size: 2rem;
   }
 
-  /* Footer petit mobile */
+
   .footer {
     padding: 40px 0 15px;
   }
@@ -1040,7 +1026,7 @@
   }
 }
 
-/* ========================================
+
    TRÈS PETITS MOBILES (max-width: 360px)
    ======================================== */
 @media (max-width: 360px) {
@@ -1112,7 +1098,7 @@
   }
 }
 
-/* ========================================
+
    ORIENTATION PAYSAGE MOBILE
    ======================================== */
 @media (max-height: 500px) and (orientation: landscape) {
@@ -1164,7 +1150,7 @@
   }
 }
 
-/* ========================================
+
    ACCESSIBILITÉ - RÉDUCTION DE MOUVEMENT
    ======================================== */
 @media (prefers-reduced-motion: reduce) {
@@ -1175,7 +1161,7 @@
   }
 }
 
-/* ========================================
+
    TOUCH TARGETS - MINIMUM 44x44px
    ======================================== */
 @media (max-width: 768px) {

@@ -1,10 +1,3 @@
-/**
- * Génération dynamique du menu depuis MENU_CONFIG
- */
-
-/**
- * Génère le menu dynamiquement depuis la configuration
- */
 function generateMenu() {
   const menuContent = document.querySelector(".menu-content");
   if (!menuContent || !MENU_CONFIG?.categories) return;
@@ -18,7 +11,6 @@ function generateMenu() {
     }`;
     categoryDiv.id = category.id;
 
-    // Vérifier si la catégorie a des sous-catégories (comme les cocktails)
     if (category.subcategories) {
       const subcategoriesDiv = document.createElement("div");
       subcategoriesDiv.className = "menu-subcategories";
@@ -54,7 +46,6 @@ function generateMenu() {
 
       categoryDiv.appendChild(subcategoriesDiv);
     } else {
-      // Catégorie normale avec items directs
       const menuGrid = document.createElement("div");
       menuGrid.className = "menu-grid";
 
@@ -78,9 +69,6 @@ function generateMenu() {
   });
 }
 
-/**
- * Met à jour les onglets du menu
- */
 function updateMenuTabs() {
   const menuTabs = document.querySelector(".menu-tabs");
   if (!menuTabs || !MENU_CONFIG?.categories) return;
@@ -96,11 +84,9 @@ function updateMenuTabs() {
   });
 }
 
-// Initialisation du menu (attend que les fragments HTML soient chargés)
 function initMenu() {
   generateMenu();
   updateMenuTabs();
 }
 
-// Attendre que les fragments HTML soient chargés
 window.addEventListener('fragmentsLoaded', initMenu);

@@ -1,4 +1,3 @@
-/* Section Privatisation - Design Moderne */
 .privatisation-section {
   padding: 120px 0;
   background: linear-gradient(
@@ -130,7 +129,6 @@
   gap: 2rem;
 }
 
-/* Cartes modernes */
 .modern-card {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
@@ -169,7 +167,6 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Carte principale */
 .privatisation-card {
   display: flex;
   flex-direction: column;
@@ -214,7 +211,6 @@
   margin: 0;
 }
 
-/* Règles */
 .privatisation-rules-title {
   color: white;
   margin: 0 0 2rem 0;
@@ -323,5 +319,3 @@
 .contact-link:hover::after {
   width: 100%;
 }
-
-/* Responsive styles sont dans responsive.css */

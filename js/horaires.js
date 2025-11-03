@@ -1,9 +1,4 @@
-/**
- * Affichage dynamique des horaires d'ouverture
- */
-
 function initHoraires() {
-  // Configuration des jours de la semaine
   const JOURS_SEMAINE = {
     lundi: "Lundi",
     mardi: "Mardi",
@@ -14,7 +9,6 @@ function initHoraires() {
     dimanche: "Dimanche",
   };
 
-  // Affichage dynamique des horaires
   function afficherHoraires() {
     const horairesDiv = document.querySelector(".horaires-dyn");
     if (!horairesDiv || !SITE_CONFIG?.contact?.hours) return;
@@ -35,9 +29,7 @@ function initHoraires() {
     horairesDiv.innerHTML = horairesHTML;
   }
 
-  // Initialisation des horaires
   afficherHoraires();
 }
 
-// Attendre que les fragments HTML soient chargés
 window.addEventListener('fragmentsLoaded', initHoraires);
