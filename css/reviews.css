@@ -1,0 +1,110 @@
+/* Section Avis Google */
+.reviews-section {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.review-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.review-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color);
+}
+
+.review-card:hover::before {
+  opacity: 1;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.review-stars {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.review-stars i {
+  color: #ffd700;
+  font-size: 1.1rem;
+}
+
+.review-author h4 {
+  margin: 0;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.review-date {
+  color: #000000;
+  font-size: 0.9rem;
+  display: block;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.review-text {
+  color: #000000;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-weight: 500;
+}
+
+.reviews-cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.reviews-cta .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  padding: 0.7rem 1.3rem;
+  max-width: 230px;
+  justify-content: flex-start;
+  padding-left: 2rem;
+}
+
+.reviews-cta .btn i {
+  font-size: 1.2rem;
+}

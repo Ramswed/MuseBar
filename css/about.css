@@ -1,0 +1,245 @@
+/* Section À propos - Design Moderne */
+.about-section {
+  padding: 80px 0;
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    var(--primary-color) 0%,
+    transparent 100%
+  );
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Texte à gauche */
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-section .section-title {
+  text-align: left;
+  margin-bottom: 0;
+  font-size: 2rem;
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+.about-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.about-text-content p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.7;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Citation mise en avant */
+.about-quote {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 165, 0, 0.05) 0%,
+    rgba(255, 165, 0, 0.02) 100%
+  );
+  border-left: 4px solid var(--primary-color);
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.about-quote:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 165, 0, 0.08) 0%,
+    rgba(255, 165, 0, 0.04) 100%
+  );
+  transform: translateX(5px);
+}
+
+.quote-text {
+  margin: 0 !important;
+  font-size: 1.05rem !important;
+  font-style: italic;
+  color: var(--secondary-color) !important;
+  line-height: 1.6 !important;
+  font-weight: 500 !important;
+}
+
+.quote-highlight {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Image et carrousel */
+.about-image {
+  position: relative;
+  height: 100%;
+  min-height: 550px;
+}
+
+/* Diaporama - Photos longues comme privatisation */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 550px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slideshow-container:hover {
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide.active img {
+  transform: scale(1);
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.5) 60%,
+    transparent 100%
+  );
+  color: white;
+  padding: 2rem 1.5rem 3.5rem;
+  text-align: left;
+  z-index: 5;
+}
+
+.slide-caption h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+}
+
+.slide-caption p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+}
+
+/* Boutons de navigation */
+.slideshow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.slideshow-btn:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.slideshow-btn.prev {
+  left: 20px;
+}
+
+.slideshow-btn.next {
+  right: 20px;
+}
+
+/* Indicateurs */
+.slideshow-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 15;
+  background: rgba(0, 0, 0, 0);
+  padding: 8px 16px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.537);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transform: scale(1.2);
+}
+
+.indicator.active {
+  background: white;
+  transform: scale(1.3);
+  box-shadow: 0 0 8px rgba(255, 165, 0, 0.5);
+}
+
+/* Responsive styles sont dans responsive.css */

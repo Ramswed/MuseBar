@@ -1,0 +1,50 @@
+/* Reset et styles de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+/* Personnalisation de la scrollbar */
+/* Webkit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-color); /* Bleu */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color); /* Orange */
+  border-radius: 10px;
+  border: 2px solid var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e06948; /* Orange plus foncé au survol */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) var(--secondary-color); /* thumb track */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

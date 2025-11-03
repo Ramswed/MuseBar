@@ -1,0 +1,40 @@
+/* Typographie */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.find-section .section-title {
+  text-align: left;
+}
+
+.about-section .section-title {
+  text-align: left;
+  margin-top: -3rem;
+  margin-bottom: 2rem;
+}
+
+.about-text .section-title {
+  text-align: left;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #000000;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}

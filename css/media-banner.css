@@ -1,0 +1,84 @@
+/* Bannière "Ils parlent de nous!" */
+.media-banner {
+  background: linear-gradient(135deg, #030652 0%, #d65900 100%);
+  color: white;
+  padding: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.media-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.media-banner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.media-banner-text {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.media-banner-text h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+}
+
+.media-arrow {
+  font-size: 1.5rem;
+  color: white;
+  animation: arrow-bounce 2s infinite;
+}
+
+.media-video-link {
+  display: flex;
+  align-items: center;
+}
+
+.video-icon-link {
+  display: inline-block;
+  font-size: 3rem;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.video-icon-link:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.video-icon-link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.video-icon-link:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.2);
+}

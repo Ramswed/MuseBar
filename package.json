@@ -1,0 +1,16 @@
+{
+  "name": "muse-bar",
+  "version": "1.0.0",
+  "description": "Site web pour le Muse Bar",
+  "scripts": {
+    "serve": "npx serve . -p 8000",
+    "start": "npx serve . -p 8000"
+  },
+  "keywords": [
+    "bar",
+    "restaurant",
+    "rouen"
+  ],
+  "author": "Muse Bar",
+  "license": "ISC"
+}

@@ -1,0 +1,16 @@
+/* Variables CSS pour les couleurs */
+:root {
+  --primary-color: #f0775aff; /* burnt-sienna */
+  --secondary-color: #0b1a39ff; /* oxford-blue */
+  --accent-color: #ebe7caff; /* parchment */
+  --text-color: #000000; /* texte principal */
+  --light-text: #333333; /* texte secondaire */
+  --background: #ffffff;
+  --light-bg: #ffffff;
+  --dark-bg: #0b1a39ff; /* oxford-blue */
+  --border-color: #ebe7caff; /* parchment */
+  --shadow: rgba(11, 26, 57, 0.1);
+  --shadow-hover: rgba(11, 26, 57, 0.2);
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}

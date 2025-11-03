@@ -1,0 +1,327 @@
+/* Section Privatisation - Design Moderne */
+.privatisation-section {
+  padding: 120px 0;
+  background: linear-gradient(
+    135deg,
+    var(--dark-bg) 0%,
+    #1a1a1a 50%,
+    var(--dark-bg) 100%
+  );
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.privatisation-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 165, 0, 0.15) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  animation: pulse 20s ease-in-out infinite;
+}
+
+.privatisation-section::after {
+  content: "";
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.08) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  animation: pulse 25s ease-in-out infinite reverse;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.privatisation-header-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.privatisation-section .section-title {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  background: #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.privatisation-section .section-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+
+.privatisation-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: stretch;
+  position: relative;
+  z-index: 1;
+}
+
+.privatisation-image {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.privatisation-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.privatisation-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.privatisation-image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.privatisation-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+  pointer-events: none;
+}
+
+.privatisation-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Cartes modernes */
+.modern-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2.5rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.modern-card:hover::before {
+  left: 100%;
+}
+
+.modern-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 165, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Carte principale */
+.privatisation-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.privatisation-card-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 165, 0, 0.2);
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modern-card:hover .privatisation-card-icon {
+  transform: scale(1.1) rotate(5deg);
+  background: rgba(255, 165, 0, 0.3);
+  box-shadow: 0 10px 20px rgba(255, 165, 0, 0.2);
+}
+
+.privatisation-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.privatisation-card-content h3 {
+  color: white;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.privatisation-card-content p {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Règles */
+.privatisation-rules-title {
+  color: white;
+  margin: 0 0 2rem 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.privatisation-rules-title i {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.privatisation-rules-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rule-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.rule-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 165, 0, 0.2);
+  transform: translateX(5px);
+}
+
+.rule-icon {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 165, 0, 0.15);
+  border-radius: 12px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.rule-item:hover .rule-icon {
+  background: rgba(255, 165, 0, 0.25);
+  transform: scale(1.1);
+}
+
+.rule-icon i {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+}
+
+.rule-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.rule-content strong {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  display: block;
+}
+
+.rule-content span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.contact-link {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.contact-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.contact-link:hover {
+  color: var(--primary-color);
+}
+
+.contact-link:hover::after {
+  width: 100%;
+}
+
+/* Responsive styles sont dans responsive.css */

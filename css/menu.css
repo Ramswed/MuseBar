@@ -1,0 +1,130 @@
+/* Section Menu */
+.menu-section {
+  padding: 100px 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 12px 24px;
+  background: white;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+.tab-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: -1;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(240, 119, 90, 0.3);
+}
+
+.tab-btn.active::before,
+.tab-btn:hover::before {
+  left: 0;
+}
+
+.menu-category {
+  display: none;
+}
+
+.menu-category.active {
+  display: block;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.menu-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 25px var(--shadow);
+}
+
+.menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.menu-item-header h3 {
+  color: var(--secondary-color);
+  font-size: 1.3rem;
+}
+
+.price {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.menu-item p {
+  color: #000000;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Sous-catégories pour les cocktails */
+.menu-subcategories {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.subcategory {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px var(--shadow);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.subcategory:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px var(--shadow-hover);
+  border-color: var(--primary-color);
+}
+
+.subcategory-title {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

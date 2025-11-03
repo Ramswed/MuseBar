@@ -1,0 +1,1202 @@
+/* Responsive Design - Optimisation Mobile Complète */
+
+/* ========================================
+   TABLETTES (max-width: 992px)
+   ======================================== */
+@media (max-width: 992px) {
+  .container {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+
+  /* Hero tablette */
+  .hero {
+    padding-top: 70px;
+    min-height: 85vh;
+  }
+
+  .hero-logo img {
+    height: 120px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  /* Menu tablette */
+  .menu-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  /* About tablette */
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-image {
+    order: -1;
+  }
+
+  .slideshow-container {
+    min-height: 450px;
+  }
+
+  /* Privatisation tablette */
+  .privatisation-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .privatisation-image {
+    order: -1;
+    min-height: 400px;
+  }
+
+  /* Find tablette */
+  .find-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .find-map {
+    order: -1;
+    min-height: 400px;
+  }
+}
+
+/* ========================================
+   MOBILE (max-width: 768px)
+   ======================================== */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  /* Navigation mobile */
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  .nav-logo img {
+    height: 35px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: rgba(11, 26, 57, 0.98);
+    width: 100%;
+    height: calc(100vh - 70px);
+    text-align: center;
+    transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    padding: 2rem 0;
+    backdrop-filter: blur(15px);
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu li {
+    margin: 0.75rem 0;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    padding: 0.9rem 2rem;
+    display: block;
+  }
+
+  /* Hero mobile */
+  .hero {
+    padding-top: 70px;
+    min-height: 85vh;
+  }
+
+  .hero-content {
+    padding: 0 15px;
+  }
+
+  .hero-logo img {
+    height: 90px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  /* Sections générales mobile */
+  .section-title {
+    font-size: 1.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Menu mobile */
+  .menu-section {
+    padding: 60px 0;
+  }
+
+  .menu-tabs {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .tab-btn {
+    width: 100%;
+    max-width: 240px;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .menu-item {
+    padding: 1.25rem;
+  }
+
+  .menu-item-header h3 {
+    font-size: 1.15rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+
+  .menu-item p {
+    font-size: 0.9rem;
+  }
+
+  .subcategory {
+    padding: 1.5rem;
+  }
+
+  .subcategory-title {
+    font-size: 1.3rem;
+  }
+
+  /* About mobile */
+  .about-section {
+    padding: 60px 0;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .about-image {
+    order: -1;
+    min-height: 400px;
+  }
+
+  .about-section .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-text-content {
+    gap: 1rem;
+  }
+
+  .about-text-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .about-quote {
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .quote-text {
+    font-size: 1rem !important;
+  }
+
+  .slideshow-container {
+    min-height: 350px;
+    border-radius: 15px;
+  }
+
+  .slideshow-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+
+  .slideshow-btn.prev {
+    left: 15px;
+  }
+
+  .slideshow-btn.next {
+    right: 15px;
+  }
+
+  .slide-caption {
+    padding: 1.5rem 1.25rem 2.5rem;
+  }
+
+  .slide-caption h3 {
+    font-size: 1.1rem;
+  }
+
+  .slide-caption p {
+    font-size: 0.85rem;
+  }
+
+  .slideshow-indicators {
+    bottom: 10px;
+    padding: 6px 12px;
+  }
+
+  .indicator {
+    width: 8px;
+    height: 8px;
+  }
+
+  /* Privatisation mobile */
+  .privatisation-section {
+    padding: 60px 0;
+  }
+
+  .privatisation-header-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .privatisation-section .section-title {
+    font-size: 1.9rem;
+  }
+
+  .privatisation-section .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .privatisation-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .privatisation-image {
+    order: -1;
+    min-height: 350px;
+  }
+
+  .modern-card {
+    padding: 1.75rem;
+  }
+
+  .privatisation-card-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1.25rem;
+  }
+
+  .privatisation-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .privatisation-card-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .privatisation-card-content p {
+    font-size: 0.9rem;
+  }
+
+  .privatisation-rules-title {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .privatisation-rules-list {
+    gap: 1.25rem;
+  }
+
+  .rule-item {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .rule-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .rule-icon i {
+    font-size: 1.1rem;
+  }
+
+  .rule-content strong {
+    font-size: 0.95rem;
+  }
+
+  .rule-content span {
+    font-size: 0.85rem;
+  }
+
+  /* Find mobile */
+  .find-section {
+    padding: 60px 0;
+  }
+
+  .find-section .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .find-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .find-info {
+    order: 2;
+  }
+
+  .find-map {
+    order: -1;
+    min-height: 350px;
+    border-radius: 15px;
+  }
+
+  .find-map-wrapper iframe {
+    min-height: 350px;
+    border-radius: 15px;
+  }
+
+  .find-item {
+    padding: 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .find-item-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .find-item-icon i {
+    font-size: 1.3rem;
+  }
+
+  .find-item-content h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .find-item-content p {
+    font-size: 0.9rem;
+  }
+
+  .copy-feedback {
+    bottom: -30px;
+    font-size: 0.8rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .horaire-ligne {
+    padding: 0.5rem 0;
+  }
+
+  .horaire-ligne .jour,
+  .horaire-ligne .horaire {
+    font-size: 0.85rem;
+  }
+
+  /* Reviews mobile */
+  .reviews-section {
+    padding: 60px 0;
+  }
+
+  .reviews-section .section-title {
+    font-size: 1.9rem;
+  }
+
+  .reviews-section .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .review-card {
+    padding: 1.5rem;
+  }
+
+  .review-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .review-stars i {
+    font-size: 1rem;
+  }
+
+  .review-author h4 {
+    font-size: 1.05rem;
+  }
+
+  .review-date {
+    font-size: 0.85rem;
+  }
+
+  .review-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .reviews-cta {
+    margin-top: 3rem;
+  }
+
+  .reviews-cta .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* Media banner mobile */
+  .media-banner {
+    padding: 30px 0;
+  }
+
+  .media-banner-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .media-banner-text {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .media-banner-text h3 {
+    font-size: 1.4rem;
+  }
+
+  .media-arrow {
+    font-size: 1.3rem;
+  }
+
+  .video-icon-link {
+    font-size: 2.5rem;
+  }
+
+  /* Footer mobile */
+  .footer {
+    padding: 50px 0 20px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .footer-brand {
+    font-size: 1.75rem;
+  }
+
+  .footer-title {
+    font-size: 1.1rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.95rem;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+
+  .footer-links li a {
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .social-link {
+    width: 42px;
+    height: 42px;
+  }
+
+  .social-link i {
+    font-size: 1.2rem;
+  }
+
+  .footer-bottom {
+    padding-top: 1.5rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* ========================================
+   PETITS MOBILES (max-width: 480px)
+   ======================================== */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  /* Navigation petit mobile */
+  .nav-container {
+    padding: 0 15px;
+  }
+
+  .nav-logo img {
+    height: 32px;
+  }
+
+  .hamburger {
+    margin-right: 0;
+  }
+
+  .bar {
+    width: 22px;
+    height: 2.5px;
+  }
+
+  .nav-menu {
+    top: 65px;
+    height: calc(100vh - 65px);
+    padding: 1.5rem 0;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  /* Hero petit mobile */
+  .hero {
+    min-height: 80vh;
+    padding-top: 65px;
+  }
+
+  .hero-content {
+    padding: 0 10px;
+  }
+
+  .hero-logo img {
+    height: 70px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+    max-width: 260px;
+  }
+
+  /* Sections petit mobile */
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Menu petit mobile */
+  .menu-section {
+    padding: 50px 0;
+  }
+
+  .tab-btn {
+    max-width: 200px;
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+
+  .menu-item {
+    padding: 1rem;
+  }
+
+  .menu-item-header h3 {
+    font-size: 1.05rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .menu-item p {
+    font-size: 0.85rem;
+  }
+
+  .subcategory {
+    padding: 1.25rem;
+  }
+
+  .subcategory-title {
+    font-size: 1.2rem;
+  }
+
+  /* About petit mobile */
+  .about-section {
+    padding: 50px 0;
+  }
+
+  .about-content {
+    gap: 2rem;
+  }
+
+  .about-section .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .about-text-content {
+    gap: 0.9rem;
+  }
+
+  .about-text-content p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .about-quote {
+    padding: 1.25rem;
+    margin: 1.25rem 0;
+  }
+
+  .quote-text {
+    font-size: 0.95rem !important;
+  }
+
+  .about-image {
+    min-height: 300px;
+  }
+
+  .slideshow-container {
+    min-height: 300px;
+    border-radius: 12px;
+  }
+
+  .slideshow-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .slideshow-btn.prev {
+    left: 10px;
+  }
+
+  .slideshow-btn.next {
+    right: 10px;
+  }
+
+  .slide-caption {
+    padding: 1.25rem 1rem 2.25rem;
+  }
+
+  .slide-caption h3 {
+    font-size: 1rem;
+  }
+
+  .slide-caption p {
+    font-size: 0.8rem;
+  }
+
+  .slideshow-indicators {
+    bottom: 8px;
+    padding: 5px 10px;
+  }
+
+  .indicator {
+    width: 7px;
+    height: 7px;
+  }
+
+  /* Privatisation petit mobile */
+  .privatisation-section {
+    padding: 50px 0;
+  }
+
+  .privatisation-header-section {
+    margin-bottom: 2rem;
+  }
+
+  .privatisation-section .section-title {
+    font-size: 1.6rem;
+  }
+
+  .privatisation-section .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .privatisation-content {
+    gap: 2rem;
+  }
+
+  .privatisation-image {
+    min-height: 280px;
+  }
+
+  .modern-card {
+    padding: 1.5rem;
+  }
+
+  .privatisation-card-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+
+  .privatisation-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .privatisation-card-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .privatisation-card-content p {
+    font-size: 0.85rem;
+  }
+
+  .privatisation-rules-title {
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .privatisation-rules-title i {
+    font-size: 1.2rem;
+  }
+
+  .privatisation-rules-list {
+    gap: 1rem;
+  }
+
+  .rule-item {
+    padding: 0.9rem;
+    gap: 0.9rem;
+  }
+
+  .rule-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .rule-icon i {
+    font-size: 1rem;
+  }
+
+  .rule-content strong {
+    font-size: 0.9rem;
+  }
+
+  .rule-content span {
+    font-size: 0.8rem;
+  }
+
+  /* Find petit mobile */
+  .find-section {
+    padding: 50px 0;
+  }
+
+  .find-section .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .find-content {
+    gap: 2rem;
+  }
+
+  .find-map {
+    min-height: 280px;
+  }
+
+  .find-map-wrapper iframe {
+    min-height: 280px;
+  }
+
+  .find-item {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .find-item-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .find-item-icon i {
+    font-size: 1.2rem;
+  }
+
+  .find-item-content h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .find-item-content p {
+    font-size: 0.85rem;
+  }
+
+  .copy-feedback {
+    bottom: -28px;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .horaire-ligne {
+    padding: 0.45rem 0;
+  }
+
+  .horaire-ligne .jour,
+  .horaire-ligne .horaire {
+    font-size: 0.8rem;
+  }
+
+  /* Reviews petit mobile */
+  .reviews-section {
+    padding: 50px 0;
+  }
+
+  .reviews-section .section-title {
+    font-size: 1.6rem;
+  }
+
+  .reviews-section .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .reviews-grid {
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .review-card {
+    padding: 1.25rem;
+  }
+
+  .review-stars i {
+    font-size: 0.95rem;
+  }
+
+  .review-author h4 {
+    font-size: 1rem;
+  }
+
+  .review-date {
+    font-size: 0.8rem;
+  }
+
+  .review-text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .reviews-cta {
+    margin-top: 2.5rem;
+  }
+
+  .reviews-cta .btn {
+    max-width: 260px;
+    font-size: 0.8rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  /* Media banner petit mobile */
+  .media-banner {
+    padding: 25px 0;
+  }
+
+  .media-banner-content {
+    gap: 1.25rem;
+  }
+
+  .media-banner-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .media-arrow {
+    font-size: 1.1rem;
+  }
+
+  .video-icon-link {
+    font-size: 2rem;
+  }
+
+  /* Footer petit mobile */
+  .footer {
+    padding: 40px 0 15px;
+  }
+
+  .footer-content {
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    font-size: 1.5rem;
+  }
+
+  .footer-title {
+    font-size: 1rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.9rem;
+  }
+
+  .footer-text {
+    font-size: 0.85rem;
+  }
+
+  .footer-links li a {
+    font-size: 0.85rem;
+  }
+
+  .social-link {
+    width: 38px;
+    height: 38px;
+  }
+
+  .social-link i {
+    font-size: 1.1rem;
+  }
+
+  .footer-bottom {
+    padding-top: 1.25rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* ========================================
+   TRÈS PETITS MOBILES (max-width: 360px)
+   ======================================== */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 9px 18px;
+    font-size: 0.8rem;
+    max-width: 240px;
+  }
+
+  .tab-btn {
+    max-width: 180px;
+    padding: 9px 14px;
+    font-size: 0.8rem;
+  }
+
+  .menu-item {
+    padding: 0.9rem;
+  }
+
+  .about-section .section-title,
+  .privatisation-section .section-title,
+  .find-section .section-title,
+  .reviews-section .section-title {
+    font-size: 1.5rem;
+  }
+
+  .slideshow-container {
+    min-height: 250px;
+  }
+
+  .slideshow-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0.8rem;
+  }
+
+  .privatisation-image,
+  .find-map,
+  .find-map-wrapper iframe {
+    min-height: 250px;
+  }
+
+  .modern-card {
+    padding: 1.25rem;
+  }
+
+  .footer-brand {
+    font-size: 1.4rem;
+  }
+}
+
+/* ========================================
+   ORIENTATION PAYSAGE MOBILE
+   ======================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: 100vh;
+    padding-top: 60px;
+  }
+
+  .hero-logo img {
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav-menu {
+    top: 60px;
+    height: calc(100vh - 60px);
+    padding: 1rem 0;
+  }
+
+  .nav-menu li {
+    margin: 0.4rem 0;
+  }
+
+  .nav-link {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .menu-section,
+  .about-section,
+  .privatisation-section,
+  .find-section,
+  .reviews-section {
+    padding: 40px 0;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITÉ - RÉDUCTION DE MOUVEMENT
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ========================================
+   TOUCH TARGETS - MINIMUM 44x44px
+   ======================================== */
+@media (max-width: 768px) {
+  .btn,
+  .tab-btn,
+  .slideshow-btn,
+  .social-link,
+  .hamburger {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .nav-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .indicator {
+    min-width: 12px;
+    min-height: 12px;
+  }
+}

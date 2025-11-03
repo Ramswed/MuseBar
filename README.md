@@ -1,38 +1,84 @@
-# 🍺 Muse Bar - Site Web Officiel
-
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://musebar.fr)
+# Muse Bar - Site Web Officiel
 
 Site web pour le **Muse Bar**, un établissement de restauration d'exception situé au cœur de Rouen. Découvrez une expérience culinaire unique avec nos planches à partager, cocktails originaux et cave privatisable.
 
-**Version actuelle : 1.0.0** - Site complet et fonctionnel
+**Version actuelle : 1.0.0**
 
-## 📁 Structure du Projet
+## Structure du Projet
 
 ```
 MuseBar/
-├── 📄 index.html              # Page principale (753 lignes)
-├── 📁 css/
-│   └── 🎨 style.css           # Styles CSS optimisés (2017 lignes)
-├── 📁 js/
-│   └── ⚡ script.js           # JavaScript principal (374 lignes)
-├── 📁 images/                 # Assets visuels
-│   ├── 🍺 bière.png           # Favicon du site
-│   ├── 🏠 bar-interior.png    # Photo intérieur
-│   ├── 🏰 cave.png            # Photo cave
-│   ├── 🏰 cave-privatisation.jpg
-│   ├── 🌳 dehors.png          # Photo extérieur
-│   ├── 🎨 logo.svg            # Logo principal
-│   ├── 🎭 muse.svg            # Logo Muse
-│   ├── 🍊 orange.svg          # Icône orange
-│   └── 🌿 terrasse.png        # Photo terrasse
-├── ⚙️ config.js               # Configuration principale (141 lignes)
-├── 🍽️ menu-config.js          # Configuration du menu (252 lignes)
-└── 📖 README.md               # Documentation complète
+├── index.html              # Page principale - charge les fragments dynamiquement
+├── html/                   # Fragments HTML modulaires
+│   ├── navigation.html
+│   ├── hero.html
+│   ├── menu.html
+│   ├── about.html
+│   ├── privatisation.html
+│   ├── find.html
+│   ├── reviews.html
+│   ├── media-banner.html
+│   └── footer.html
+├── css/                    # Styles CSS modulaires
+│   ├── variables.css       # Variables CSS (couleurs, espacements)
+│   ├── reset.css           # Reset CSS
+│   ├── typography.css      # Typographie
+│   ├── buttons.css         # Styles des boutons
+│   ├── navigation.css      # Navigation
+│   ├── hero.css            # Section hero
+│   ├── animations.css      # Animations
+│   ├── menu.css            # Menu
+│   ├── about.css           # Section à propos
+│   ├── privatisation.css   # Section privatisation
+│   ├── find.css            # Section nous trouver
+│   ├── reviews.css         # Section avis
+│   ├── media-banner.css    # Bannière média
+│   ├── footer.css          # Footer
+│   └── responsive.css      # Media queries responsive
+├── js/                     # Scripts JavaScript modulaires
+│   ├── config/
+│   │   ├── config.js       # Configuration principale du site
+│   │   └── menu-config.js  # Configuration du menu
+│   ├── loader.js           # Chargeur de fragments HTML
+│   ├── main.js             # Point d'entrée principal
+│   ├── utils.js            # Fonctions utilitaires
+│   ├── navigation.js       # Gestion de la navigation
+│   ├── smooth-scroll.js    # Défilement fluide
+│   ├── menu-tabs.js        # Gestion des onglets du menu
+│   ├── menu-generator.js   # Génération dynamique du menu
+│   ├── animations.js       # Animations
+│   ├── slideshow.js        # Carrousel d'images
+│   └── horaires.js         # Gestion des horaires
+├── images/                 # Assets visuels
+│   ├── logo.svg            # Logo principal
+│   ├── muse.svg            # Logo Muse
+│   ├── orange.svg          # Icône favicon
+│   ├── bière.png
+│   ├── dehors.png
+│   ├── terrasse.png
+│   ├── cave-privatisation.jpg
+│   └── carrousel/          # Images du carrousel
+│       ├── bar.jpg
+│       ├── biere.jpg
+│       ├── cave.png
+│       ├── planche.jpg
+│       └── terrasse.jpg
+├── package.json            # Configuration npm
+└── README.md               # Documentation
 ```
 
-## 🎨 Design System
+## Architecture
 
-### **Palette de Couleurs**
+Le site utilise une architecture modulaire avec chargement dynamique des fragments HTML :
+
+- **Fragments HTML** : Chaque section est dans un fichier séparé chargé via `loader.js`
+- **CSS modulaire** : Styles organisés par fonctionnalité/section
+- **JavaScript modulaire** : Un fichier par fonctionnalité
+- **Configuration centralisée** : `config.js` pour les informations du site et `menu-config.js` pour le menu
+
+## Design System
+
+### Palette de Couleurs
 
 ```css
 :root {
@@ -48,146 +94,50 @@ MuseBar/
 }
 ```
 
-## 🎨 Typographie
+### Typographie
 
-### **Polices Principales**
+- **Playfair Display** : Titres principaux
+- **Poppins** : Texte général
+- **Funnel Display** : Accents
 
-- **Playfair Display**
+### Breakpoints Responsive
 
-- **Poppins**
+- Desktop : 1200px+
+- Tablette : 992px - 1199px
+- Mobile Large : 768px - 991px
+- Mobile Standard : 576px - 767px
+- Mobile Petit : < 576px
 
-- **Funnel Display**
+## Installation & Déploiement
 
-### **Breakpoints Responsive**
-
-```css
-/* Desktop Large */
-@media (min-width: 1200px) {
-  /* ... */
-}
-
-/* Desktop Standard */
-@media (max-width: 1199px) {
-  /* ... */
-}
-
-/* Tablette */
-@media (max-width: 991px) {
-  /* ... */
-}
-
-/* Mobile Large */
-@media (max-width: 767px) {
-  /* ... */
-}
-
-/* Mobile Standard */
-@media (max-width: 575px) {
-  /* ... */
-}
-
-/* Mobile Petit */
-@media (max-width: 479px) {
-  /* ... */
-}
-```
-
-## 🔧 Configuration
-
-### **Fichier Principal (`config.js`)**
-
-```javascript
-const SITE_CONFIG = {
-  site: {
-    name: "Muse",
-    tagline: "Bar et cuisine à partager",
-    version: "2.0.0",
-  },
-  contact: {
-    address: "4 impasse des Hauts Mariages",
-    city: "76000 Rouen, France",
-    hours: {
-      /* Horaires d'ouverture */
-    },
-  },
-  social: {
-    instagram: "https://www.instagram.com/muse_bar_rouen/",
-  },
-};
-```
-
-### **Configuration du Menu (`menu-config.js`)**
-
-```javascript
-const MENU_CONFIG = {
-  categories: [
-    {
-      id: "grignotages",
-      name: "Grignotages",
-      items: [
-        /* Items du menu */
-      ],
-    },
-    // ... autres catégories
-  ],
-};
-```
-
-## 🚀 Installation & Déploiement
-
-### **Prérequis**
+### Prérequis
 
 - Navigateur moderne (Chrome 90+, Firefox 88+, Safari 14+)
-- Serveur web (Apache, Nginx, ou serveur local)
+- Serveur web local pour le développement (les fragments HTML sont chargés via fetch)
 
-### **Installation Locale**
+### Installation Locale
 
 ```bash
-# Ouvrir le projet dans un navigateur
-# ou utiliser un serveur local
-python -m http.server 8000
-# ou
-npx serve .
+# Avec npm
+npm install
+npm start
+
+# Avec npx (sans installation)
+npx serve . -p 8000
+
+# Le site sera accessible sur http://localhost:8000
 ```
 
-## 📱 Compatibilité
+## Contact
 
-### **Navigateurs Supportés**
+**Muse Bar**
 
-- ✅ **Chrome** 90+
-- ✅ **Firefox** 88+
-- ✅ **Safari** 14+
-- ✅ **Edge** 90+
-- ✅ **Mobile Safari** iOS 14+
-- ✅ **Chrome Mobile** Android 8+
-
-### **Appareils Testés**
-
-- 📱 **Mobile** : iPhone, Android (portrait et paysage)
-- 📱 **Tablette** : iPad, Android (portrait et paysage)
-- 💻 **Desktop** : Windows, macOS, Linux
-- 🖥️ **Écrans** : 320px à 4K+
-
-## 🔍 Maintenance
-
-### **Mises à Jour Régulières**
-
-- **Images** : Remplacer les photos temporaires
-- **Contenu** : Mettre à jour le menu et horaires
-- **Configuration** : Ajuster les paramètres
-
-## 📞 Contact
-
-### **Muse Bar**
-
-- **📍 Adresse** : 4 impasse des Hauts Mariages, 76000 Rouen
-- **📱 Instagram** : [@muse_bar_rouen](https://www.instagram.com/muse_bar_rouen/)
-- **🌐 Site** : [musebar.fr](https://musebar.fr)
+- Adresse : 4 impasse des Hauts Mariages, 76000 Rouen, France
+- Instagram : [@muse_bar_rouen](https://www.instagram.com/muse_bar_rouen/)
+- Site : [musebar.fr](https://musebar.fr)
 
 ---
 
----
+Développé par @ramswed pour le Muse Bar
 
-**Développé avec pour le Muse Bar**
-
-_© 2025 Muse Bar. Tous droits réservés._
+© 2025 Muse Bar. Tous droits réservés.
