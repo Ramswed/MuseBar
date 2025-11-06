@@ -199,13 +199,13 @@ const MENU_CONFIG = {
           items: [
             {
               name: "BLAYE - CÔTES DE BORDEAUX",
-              price: "6.50€ / 15€",
-              description: "AOC (12cl / 75cl).",
+              price: "25€",
+              description: "AOC (12cl / 75cl). 6.50€ le verre.",
             },
             {
               name: "CÔTES DU RHÔNE",
-              price: "6.50€ / 15€",
-              description: "AOC (12cl / 75cl).",
+              price: "25€",
+              description: "AOC (12cl / 75cl). 6.50€ le verre.",
             },
           ],
         },
@@ -214,18 +214,18 @@ const MENU_CONFIG = {
           items: [
             {
               name: "RABBLY",
-              price: "13€",
-              description: "Vin de France, Sec Fruité (75cl).",
+              price: "25€",
+              description: "Vin de France, Sec Fruité (75cl). 6.50€ le verre.",
             },
             {
               name: "UBY n°4 - CÔTES DE GASCOGNE",
-              price: "13€",
-              description: "IGP (75cl).",
+              price: "25€",
+              description: "IGP (75cl). 6.50€ le verre.",
             },
             {
               name: "CHARDONNAY",
-              price: "5.50€ / 23€",
-              description: "IGP (12cl / 75cl).",
+              price: "23€",
+              description: "IGP (12cl / 75cl). 5.50€ le verre.",
             },
           ],
         },
